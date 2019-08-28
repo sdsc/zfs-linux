@@ -93,7 +93,7 @@ RPMDIRS:
 		mkdir -p $(REDHAT.ROOT)/SRPMS; fi
 
 buildreqs:
-	yum -y install zlib-devel libuuid-devel libblkid-devel libselinux-devel parted lsscsi
+	yum -y install zlib-devel libuuid-devel libblkid-devel libselinux-devel parted lsscsi libaio-devel
 
 addledmon:
 	yumdownloader --enablerepo=base ledmon
