@@ -1,6 +1,5 @@
-diff -r -c3 zfs-0.7.1-orig/scripts/kmodtool zfs-0.7.1/scripts/kmodtool
-*** zfs-0.7.1-orig/scripts/kmodtool	2017-08-08 15:58:19.000000000 -0700
---- zfs-0.7.1/scripts/kmodtool	2017-08-27 09:57:06.653318784 -0700
+*** spl-0.7.13-orig/scripts/kmodtool	2019-02-22 09:55:48.000000000 -0800
+--- spl-0.7.13/scripts/kmodtool	2019-08-27 10:28:36.726967228 -0700
 ***************
 *** 153,160 ****
   Provides:         kmod-${kmodname}-uname-r = ${kernel_uname_r}
@@ -17,7 +16,7 @@ diff -r -c3 zfs-0.7.1-orig/scripts/kmodtool zfs-0.7.1/scripts/kmodtool
   Requires:         ${kmodname}-kmod-common >= %{?epoch:%{epoch}:}%{version}
 ! #Requires(post):   ${prefix}/sbin/depmod
 ! #Requires(postun): ${prefix}/sbin/depmod
-! AutoReq:	no
+! AutoReq:          no
   EOF
   
   	if [[ ${obsolete_name} ]]; then

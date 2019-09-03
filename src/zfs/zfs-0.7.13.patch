@@ -1,6 +1,5 @@
-diff -r -c3 spl-0.7.1-orig/scripts/kmodtool spl-0.7.1/scripts/kmodtool
-*** spl-0.7.1-orig/scripts/kmodtool	2017-08-08 15:58:23.000000000 -0700
---- spl-0.7.1/scripts/kmodtool	2017-08-27 09:51:06.554282611 -0700
+*** zfs-0.7.13-orig/scripts/kmodtool	2019-02-22 09:55:43.000000000 -0800
+--- zfs-0.7.13/scripts/kmodtool	2019-08-27 10:32:20.088978486 -0700
 ***************
 *** 153,160 ****
   Provides:         kmod-${kmodname}-uname-r = ${kernel_uname_r}
@@ -15,9 +14,9 @@ diff -r -c3 spl-0.7.1-orig/scripts/kmodtool spl-0.7.1/scripts/kmodtool
   Provides:         kmod-${kmodname}-uname-r = ${kernel_uname_r}
   Provides:         ${kmodname}-kmod = %{?epoch:%{epoch}:}%{version}-%{release}
   Requires:         ${kmodname}-kmod-common >= %{?epoch:%{epoch}:}%{version}
-! # Requires(post):   ${prefix}/sbin/depmod
-! # Requires(postun): ${prefix}/sbin/depmod
-! AutoReq:	no
+! #Requires(post):   ${prefix}/sbin/depmod
+! #Requires(postun): ${prefix}/sbin/depmod
+! AutoReq:          no
   EOF
   
   	if [[ ${obsolete_name} ]]; then
